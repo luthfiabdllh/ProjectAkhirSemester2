@@ -1,0 +1,102 @@
+
+.blue{
+    color: beige;
+}
+
+/* Banner */
+.banner{
+    background: url('../assets/images/navbar-bg.jpg');
+    /* background: url('https://via.placeholder.com/150'); */
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+/* Navbar */
+.navbar{
+    height: 80px;
+    margin: 20px;
+    border-radius: 50px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand{
+    font-weight: 500;
+    color: #009970;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+
+.login-button{
+    background-color: #009970;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover{
+    background-color: #00b383; /* Warna yang berubah saat hover */
+}
+
+.navbar-toggle{
+    border: none;
+    font-size: 1.25rem;
+    /* background: transparent; */
+    color: #009970;
+}
+
+.navbar-toggle:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s color;
+}
+
+.btn-outline-light{
+    background-color: blue;
+}
+
+
+@media (min-width: 991px){
+    .nav-link:hover, .nav-link.active{
+        color: #000;
+    }
+
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #009970;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+
+    .dropdown-menu{
+        max-height: 200px;
+    }
+    
+}
